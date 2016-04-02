@@ -24,6 +24,11 @@ Also, I changed the code for the deposit reports. I replaced the grid system wit
  built-in table-responsive wrapper, which automatically creates a horizontal scrollbar for the table as the page width
  gets smaller.
 
+Note:
+---------
+1) For convenience, I have created a public GitHub repository for this project's code:
+https://github.com/chassiness/CMSC207
+
 
 ASSIGNMENT #1
 Date Submitted: March 11, 2016, Pacific Time
