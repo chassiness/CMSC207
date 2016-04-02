@@ -1,0 +1,41 @@
+<!-- NAVIGATION -->
+<div ng-include="'views/admin/adminnav.html'"></div>
+
+<!-- ADD DEPOSIT -->
+<div class="small-form center-block text-center">
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title text-uppercase">Add Deposit Entry</h3>
+        </div>
+        <div class="panel-body">
+
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="employeeName" placeholder="Employee Name">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="disbursementVoucherNumber"
+                           placeholder="Disbursement Voucher Number">
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" rows="3" id="description" placeholder="Description"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="amount" placeholder="Amount (in Pesos)">
+                </div>
+                <div class="form-group">
+                    <input type="date" class="form-control" id="dateOfDeposit" placeholder="Date of Deposit">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="bankAccountNumber"
+                           placeholder="Bank Account Number">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+

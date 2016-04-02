@@ -1,0 +1,182 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 50px;
+}
+
+h1, h2, h3, h5 {
+    font-family: Roboto, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #080808;
+}
+
+.placeholder-banner {
+    background-color: rgba(75, 136, 173, 0.1);
+    transition: all 0.25s ease-in-out;
+    border-radius: 0px;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+}
+
+.copyright {
+    height: inherit;
+    color: rgba(255,255,255,0.4);
+    vertical-align: middle;
+    letter-spacing: 1px;
+    font-size: 12px;
+    width: auto;
+    max-width: 85%;
+    padding: 0 15px;
+}
+
+.copyright div {
+    height: inherit;
+    background-color: #1e232f;
+    padding-top: 17px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    display: block;
+    margin-top: 50px;
+}
+
+.main-content {
+    max-width: 85%;
+}
+
+.small-form {
+    margin-top: 50px;
+    width: 50%;
+    font-family: 'Arimo', sans-serif;
+}
+
+/** ADMIN NAVIGATION **/
+
+.custom-nav {
+    max-width: 800px;
+    min-height: 50px;
+    transition: all 0.25s ease-in-out;
+}
+
+a.nav-tab {
+    color: #333333;
+    padding: 5px 15px;
+    transition: all 0.25s ease-in-out;
+}
+
+a.nav-tab h5 {
+    transition: all 0.25s ease-in-out;
+}
+
+.emp-nav a.nav-tab:hover h5, .emp-nav a.nav-tab:active h5 {
+    color: #2c7c9f;
+}
+
+.admin-nav a.nav-tab:hover h5, .admin-nav a.nav-tab:active h5 {
+    color: #77b38e;
+}
+
+a:hover, a:visited, a, a.nav-tab:-webkit-any-link {
+    background-color: transparent;
+    text-decoration: none;
+    color: initial;
+    transition: all 0.25s ease-in-out;
+    font-family: 'Roboto', sans-serif;
+}
+
+a:focus {
+    outline: none;
+}
+
+/** UNDER CONSTRUCTION **/
+
+.construction {
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+    margin: 50px 0 50px 0;
+}
+
+.img-caption {
+    border: 1px solid;
+    color: #A7A7A7;
+    width: 90%;
+    position: relative;
+    padding: 40px;
+}
+
+.deposit-picker {
+    width: 60%;
+    margin-top: 50px;
+}
+
+.history-detail {
+    padding: 10px 0;
+    border-top: solid 1px #d6d6d6;
+    transition: all 0.25s ease-in-out;
+}
+
+.deposit-history-panel {
+    border: solid 1px #d6d6d6;
+    padding: 10px 20px;
+    margin-top: 50px;
+}
+
+/*.deposit-history-panel-header {*/
+    /*border-bottom: solid 2px #d6d6d6;*/
+    /*padding-bottom: 10px;*/
+    /*background-color: rgba(232, 239, 245, 0.66);*/
+/*}*/
+
+.modal-body {
+    font-size: 18px;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+
+    .navbar-wrapper {
+        margin-top: 20px;
+    }
+    .navbar-wrapper .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .navbar-wrapper .navbar {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    /* The navbar becomes detached from the top, so we round the corners */
+    .navbar-wrapper .navbar {
+        border-radius: 4px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        max-width: 100%;
+    }
+
+    .copyright {
+        max-width: 100%;
+    }
+
+    .nav-justified>li {
+        max-height: 50px;
+    }
+
+    .small-form {
+        width: 100%;
+    }
+}

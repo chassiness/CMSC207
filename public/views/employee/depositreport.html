@@ -1,0 +1,70 @@
+<!-- NAVIGATION -->
+<div ng-include="'views/employee/employeenav.html'"></div>
+
+<div>
+
+    <div class="deposit-picker center-block">
+        <p class="input-group">
+            <input type="text" class="form-control" uib-datepicker-popup="{{ format }}" ng-model="dt"
+                   is-open="popup2.opened"
+                   datepicker-options="dateOptions" ng-required="true" close-text="Close"/>
+        <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="open2()"><i
+                    class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+        </p>
+    </div>
+
+</div>
+
+
+<div class="table-responsive deposit-history-panel">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>
+                <a href="#" ng-click="sortType = sortDate">
+                    <h5><strong>Date </strong><span ng-show="sortType == sortByDate"
+                                                    class="fa fa-caret-down"></span></h5>
+                </a>
+            </th>
+            <th>
+                <a href="#" ng-click="sortType = sortByVoucherNumber">
+                    <h5><strong>Disbursement Voucher Number </strong><span
+                            ng-show="sortType == sortByVoucherNumber"
+                            class="fa fa-caret-down"></span></h5>
+                </a>
+            </th>
+            <th>
+                <a href="#">
+                    <h5><strong>Description </strong></h5>
+                </a>
+            </th>
+            <th>
+                <a href="#" ng-click="sortType = sortByAmount">
+                    <h5><strong>Amount (Php) </strong><span ng-show="sortType == sortByAmount"
+                                                            class="fa fa-caret-down"></span></h5>
+                </a>
+            </th>
+            <th>
+                <h5><strong>Account Number</strong></h5>
+            </th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr ng-repeat="deposit in history | orderBy : sortType">
+
+            <th scope="row">{{ deposit.date | date:'dd-MMMM-yyyy' }}</th>
+            <td>{{ deposit.voucherNumber }}</td>
+            <td>{{ deposit.description }}</td>
+            <td>{{ deposit.amount }}</td>
+            <td>{{ deposit.account }}</td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+</div>

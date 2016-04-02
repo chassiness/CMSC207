@@ -1,0 +1,84 @@
+************************************************
+CMSC207 AY2015-16
+Name: Chastine Grace Guy-Uyco De Leon
+Student Number: 2014-92422
+Learning Center: UPOULC, Manila
+************************************************
+
+
+ASSIGNMENT #2
+Date Submitted: April 1, 2016, Pacific Time
+================================================
+
+Instruction: Make all web pages responsive.
+
+I have already included and used Twitter Bootstrap in Assignment #1 so it was just a matter of removing fixed-width
+ components and replacing those with responsive ones. The biggest problem I ran into was the sticky footer but I was
+ able to finally fix it by looking at the example on the Bootstrap website.
+
+By default, as in on desktop, my web page containers are set at a maximum width of 85%, forms at a maximum of 50%. I
+ added custom CSS so that if the device's width is less than 768px (devices smaller than a tablet), the web page
+ containers and forms' width are set to 100% to maximize space and reduce blank space.
+
+Also, I changed the code for the deposit reports. I replaced the grid system with a table instead, to capitalize on its
+ built-in table-responsive wrapper, which automatically creates a horizontal scrollbar for the table as the page width
+ gets smaller.
+
+
+ASSIGNMENT #1
+Date Submitted: March 11, 2016, Pacific Time
+================================================
+
+Assumptions Made
+---------------------
+1) With regards to the instruction:
+"Create a web-page that has a sample table of a deposit report of an employee with month picker. (Jan – Dec)"
+
+I assumed that the deposit report is supposed to be included in the Employee view, since this is not included in the
+Admin menu items listed.
+
+2) Backend functionality not yet required.
+
+
+Design Decisions
+---------------------
+1) I decided to implement a MEAN (MongoDB, Express, AngularJS, NodeJS) Stack Single Page Application.
+Although the requirements for the assignment were only HTML and CSS pages, I decided to build the skeleton framework of
+the application in preparation for possible backend requirements in the future.
+2) Only AngularJS and NodeJS have been implemented so far.
+
+
+Build Instructions
+---------------------
+Here are the step-by-step instructions, followed by the command to run in the command line:
+
+1) Install NodeJS: https://nodejs.org/en/
+2) Run the node server inside the project's main/umbrella directory
+    node server.js
+
+
+Home URLs
+---------------------
+http://localhost:8080/
+http://localhost:8080/index.html
+Both URLs redirect to login page.
+
+http://localhost:8080/employeehome
+Home page for employees.
+Login page should redirect to this page if Employee role (functionality not yet included).
+
+http://localhost:8080/adminhome
+Home page for admins.
+Login page should redirect to this page if Admin role (functionality not yet included).
+
+
+Screencast
+---------------------
+I tried my best to document my coding process but I was not able to do 100% because Jing stops at the 5min mark and I
+usually forget to restart it, especially during the times that I'm debugging errors. I coded everything in one day, that's why
+all the *.swf files are the same date.
+
+The project I kept on referencing during the screencast was my final project for IS226 (not 227 like I erroneously said
+during the screencast), 2nd Sem last year under Sir Rein. I used a MEAN stack for it as well.
+
+My husband was watching AlDub in the background (ugh) or playing NBA in his playstation thus the occasional fits of laughter/NBA soundtrack.
