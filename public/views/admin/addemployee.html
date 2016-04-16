@@ -13,7 +13,7 @@
             <form name="employeeForm" novalidate ng-submit="createEmployeeEntry()">
                 <div class="form-group"
                      ng-class="{'has-error' : (employeeForm.employeeNumber.$touched && employeeForm.employeeNumber.$invalid)}">
-                    <input type="text" class="form-control" name="employeeNumber" placeholder="Employee Number"
+                    <input type="text" class="form-control" name="employeeNumber" placeholder="* Employee Number"
                             ng-model="employee.number" required>
                     <div ng-show="(employeeForm.employeeNumber.$touched && employeeForm.employeeNumber.$invalid)"
                          class="text-danger">
@@ -24,7 +24,7 @@
                 </div>
                 <div class="form-group"
                      ng-class="{'has-error' : (employeeForm.firstName.$touched && employeeForm.firstName.$invalid)}">
-                    <input type="text" class="form-control" name="firstName" placeholder="First Name"
+                    <input type="text" class="form-control" name="firstName" placeholder="* First Name"
                            ng-model="employee.firstName" ng-minlength="2" ng-pattern="/^([A-Za-z]+(-?'?\s?[A-Za-z])*)$/"
                            required>
                     <div ng-show="(employeeForm.firstName.$touched && employeeForm.firstName.$invalid)"
@@ -42,7 +42,7 @@
                 </div>
                 <div class="form-group"
                      ng-class="{'has-error' : (employeeForm.middleInitial.$touched && employeeForm.middleInitial.$invalid)}">
-                    <input type="text" class="form-control" name="middleInitial" placeholder="Middle Initial"
+                    <input type="text" class="form-control" name="middleInitial" placeholder="* Middle Initial"
                             ng-model="employee.middleInitial" required ng-maxlength="1" ng-pattern="/\b[A-Za-z]\b/">
                     <div ng-show="(employeeForm.middleInitial.$touched && employeeForm.middleInitial.$invalid)"
                          class="text-danger">
@@ -56,7 +56,7 @@
                 </div>
                 <div class="form-group"
                      ng-class="{'has-error' : (employeeForm.lastName.$touched && employeeForm.lastName.$invalid)}">
-                    <input type="text" class="form-control" name="lastName" placeholder="Last Name"
+                    <input type="text" class="form-control" name="lastName" placeholder="* Last Name"
                             ng-model="employee.lastName" required ng-minlength="2" ng-pattern="/^([A-Za-z]+(-?'?\s?[A-Za-z])*)$/">
                     <div ng-show="(employeeForm.lastName.$touched && employeeForm.lastName.$invalid)"
                          class="text-danger">
@@ -73,7 +73,7 @@
                 </div>
                 <div class="form-group"
                      ng-class="{'has-error' : (employeeForm.userName.$touched && employeeForm.userName.$invalid)}">
-                    <input type="text" class="form-control" name="userName" placeholder="Username"
+                    <input type="text" class="form-control" name="userName" placeholder="* Username"
                             ng-model="employee.userName" required ng-minlength="8" ng-pattern="/^[\w\d]+$/">
                     <div ng-show="(employeeForm.userName.$touched && employeeForm.userName.$invalid)"
                          class="text-danger">
@@ -90,7 +90,7 @@
                 </div>
                 <div class="form-group"
                      ng-class="{'has-error' : (employeeForm.password.$touched && employeeForm.password.$invalid)}">
-                    <input type="password" class="form-control" name="password" placeholder="Password"
+                    <input type="password" class="form-control" name="password" placeholder="* Password"
                             ng-model="employee.password" required ng-minlength="8">
                     <div ng-show="(employeeForm.password.$touched && employeeForm.password.$invalid)"
                          class="text-danger">

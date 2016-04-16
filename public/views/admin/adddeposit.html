@@ -13,7 +13,7 @@
             <form name="depositForm" novalidate ng-submit="createDepositEntry()">
                 <div class="form-group"
                      ng-class="{'has-error' : (depositForm.employeeName.$touched && depositForm.employeeName.$invalid)}">
-                    <input type="text" class="form-control" name="employeeName" placeholder="Employee Name"
+                    <input type="text" class="form-control" name="employeeName" placeholder="* Employee Name"
                            ng-model="deposit.employeeName" ng-minlength="5" ng-pattern="/^([A-Za-z]+(-?\s?'?[A-Za-z])*)$/" required>
                     <div ng-show="(depositForm.employeeName.$touched && depositForm.employeeName.$invalid)"
                          class="text-danger">
@@ -30,7 +30,7 @@
                 </div>
                 <div class="form-group"
                      ng-class="{'has-error' : (depositForm.voucherNumber.$touched && depositForm.voucherNumber.$invalid)}">
-                    <input type="text" class="form-control" name="voucherNumber" placeholder="Disbursement Voucher Number"
+                    <input type="text" class="form-control" name="voucherNumber" placeholder="* Disbursement Voucher Number"
                            ng-model="deposit.voucherNumber" required>
                     <div ng-show="(depositForm.voucherNumber.$touched && depositForm.voucherNumber.$invalid)"
                          class="text-danger">
@@ -41,7 +41,7 @@
                 </div>
                 <div class="form-group"
                      ng-class="{'has-error' : (depositForm.description.$touched && depositForm.description.$invalid)}">
-                    <textarea class="form-control" rows="3" name="description" placeholder="Description"
+                    <textarea class="form-control" rows="3" name="description" placeholder="* Description"
                               ng-model="deposit.description" required></textarea>
                     <div ng-show="(depositForm.description.$touched && depositForm.description.$invalid)"
                          class="text-danger">
@@ -54,7 +54,7 @@
                      ng-class="{'has-error' : (depositForm.amount.$touched && depositForm.amount.$invalid)}">
                     <div class="input-group">
                         <span class="input-group-addon">Php</span>
-                        <input type="number" class="form-control" name="amount" placeholder="Amount (in Pesos)"
+                        <input type="number" class="form-control" name="amount" placeholder="* Amount (in Pesos)"
                                ng-model="deposit.amount" required>
                     </div>
                     <div ng-show="(depositForm.amount.$touched && depositForm.amount.$invalid)"
@@ -74,14 +74,12 @@
                                is-open="opened"
                                datepicker-options="dateOptions"
                                ng-required="true"
-                               placeholder="Deposit Date"/>
+                               placeholder="* Deposit Date"/>
                         <span class="input-group-btn">
                             <button type="button" class="btn btn-default" ng-click="openDatePicker()"><i
                                 class="glyphicon glyphicon-calendar"></i></button>
                         </span>
                     </div>
-
-                   <!-- <input type="date" class="form-control" name="dateOfDeposit" placeholder="Date of Deposit">-->
                     <div ng-show="(depositForm.depositDate.$touched && depositForm.depositDate.$invalid)"
                          class="text-danger">
                         <small ng-show="depositForm.depositDate.$error.required">
@@ -91,7 +89,7 @@
                 </div>
                 <div class="form-group"
                      ng-class="{'has-error' : (depositForm.bankAccountNumber.$touched && depositForm.bankAccountNumber.$invalid)}">
-                    <input type="text" class="form-control" name="bankAccountNumber" placeholder="Bank Account Number"
+                    <input type="text" class="form-control" name="bankAccountNumber" placeholder="* Bank Account Number"
                            ng-model="deposit.bankAcctNum" required>
                     <div ng-show="(depositForm.bankAccountNumber.$touched && depositForm.bankAccountNumber.$invalid)"
                          class="text-danger">
