@@ -6,6 +6,31 @@ Learning Center: UPOULC, Manila
 ************************************************
 
 
+ASSIGNMENT #3
+Date Submitted: APRIL 16, 2016, Pacific Time
+================================================
+
+Instruction: Add at least 5 client-side form validation techniques
+
+Validations added:
+A. Add deposit entry form
+    1. All fields are required
+    2. Employee name has to be at least 5 characters long. Only alphabetical characters are allowed, including a space
+        in between two names.
+    3. Amount should only be a number
+    4. Submit button is disabled as long as the form and/or any of its fields is invalid.
+B. Add employee form
+    1. All fields are required
+    2. First name has to be at least 2 characters long. Only alphabetical characters are allowed, including a space in
+        between two names (e.g. Chastine Grace).
+    3. Middle initial should only be 1 character long.
+    4. Last name has to be at least 2 characters long. Only alphabetical characters are allowed, including a space or
+        dash in between two names (e.g. De Leon, Guy-Uyco).
+    5. Username should have at least 8 characters. Only alphanumeric characters allowed.
+    6. Password should have at least 8 characters.
+    7. Submit button is disabled as long as the form and/or any of its fields is invalid.
+
+
 ASSIGNMENT #2
 Date Submitted: April 1, 2016, Pacific Time
 ================================================
