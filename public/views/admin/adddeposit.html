@@ -14,7 +14,7 @@
                 <div class="form-group"
                      ng-class="{'has-error' : (depositForm.employeeName.$touched && depositForm.employeeName.$invalid)}">
                     <input type="text" class="form-control" name="employeeName" placeholder="Employee Name"
-                           ng-model="deposit.employeeName" ng-minlength="5" ng-pattern="/^([A-Za-z]+(-?\s?[A-Za-z])*)$/" required>
+                           ng-model="deposit.employeeName" ng-minlength="5" ng-pattern="/^([A-Za-z]+(-?\s?'?[A-Za-z])*)$/" required>
                     <div ng-show="(depositForm.employeeName.$touched && depositForm.employeeName.$invalid)"
                          class="text-danger">
                         <small ng-show="depositForm.employeeName.$error.required">
