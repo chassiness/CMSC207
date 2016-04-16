@@ -10,28 +10,99 @@
         </div>
         <div class="panel-body">
 
-            <form>
-                <div class="form-group">
-                    <input type="text" class="form-control" id="employeeName" placeholder="Employee Name">
+            <form name="depositForm" novalidate ng-submit="createDepositEntry()">
+                <div class="form-group"
+                     ng-class="{'has-error' : (depositForm.employeeName.$touched && depositForm.employeeName.$invalid)}">
+                    <input type="text" class="form-control" name="employeeName" placeholder="Employee Name"
+                           ng-model="deposit.employeeName" ng-minlength="5" ng-pattern="/^([A-Za-z]+(-?\s?[A-Za-z])*)$/" required>
+                    <div ng-show="(depositForm.employeeName.$touched && depositForm.employeeName.$invalid)"
+                         class="text-danger">
+                        <small ng-show="depositForm.employeeName.$error.required">
+                            Employee name is required.
+                        </small>
+                        <small ng-show="depositForm.employeeName.$error.minlength">
+                            Employee name has to be at least 5 characters.
+                        </small>
+                        <small ng-show="depositForm.employeeName.$error.pattern">
+                            Employee name cannot contain numerical or special characters.
+                        </small>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" id="disbursementVoucherNumber"
-                           placeholder="Disbursement Voucher Number">
+                <div class="form-group"
+                     ng-class="{'has-error' : (depositForm.voucherNumber.$touched && depositForm.voucherNumber.$invalid)}">
+                    <input type="text" class="form-control" name="voucherNumber" placeholder="Disbursement Voucher Number"
+                           ng-model="deposit.voucherNumber" required>
+                    <div ng-show="(depositForm.voucherNumber.$touched && depositForm.voucherNumber.$invalid)"
+                         class="text-danger">
+                        <small ng-show="depositForm.voucherNumber.$error.required">
+                            Disbursement voucher number is required.
+                        </small>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <textarea class="form-control" rows="3" id="description" placeholder="Description"></textarea>
+                <div class="form-group"
+                     ng-class="{'has-error' : (depositForm.description.$touched && depositForm.description.$invalid)}">
+                    <textarea class="form-control" rows="3" name="description" placeholder="Description"
+                              ng-model="deposit.description" required></textarea>
+                    <div ng-show="(depositForm.description.$touched && depositForm.description.$invalid)"
+                         class="text-danger">
+                        <small ng-show="depositForm.description.$error.required">
+                            Description is required.
+                        </small>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" id="amount" placeholder="Amount (in Pesos)">
+                <div class="form-group"
+                     ng-class="{'has-error' : (depositForm.amount.$touched && depositForm.amount.$invalid)}">
+                    <div class="input-group">
+                        <span class="input-group-addon">Php</span>
+                        <input type="number" class="form-control" name="amount" placeholder="Amount (in Pesos)"
+                               ng-model="deposit.amount" required>
+                    </div>
+                    <div ng-show="(depositForm.amount.$touched && depositForm.amount.$invalid)"
+                         class="text-danger">
+                        <small ng-show="depositForm.amount.$error.required">
+                            Amount is required.
+                        </small>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="date" class="form-control" id="dateOfDeposit" placeholder="Date of Deposit">
+                <div class="form-group"
+                     ng-class="{'has-error' : (depositForm.depositDate.$touched && depositForm.depositDate.$invalid)}">
+
+                    <div class="input-group">
+                        <input ng-model="deposit.date" name="depositDate"
+                               type="text" class="form-control"
+                               uib-datepicker-popup="{{ dateFormat }}"
+                               is-open="opened"
+                               datepicker-options="dateOptions"
+                               ng-required="true"
+                               placeholder="Deposit Date"/>
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="openDatePicker()"><i
+                                class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </div>
+
+                   <!-- <input type="date" class="form-control" name="dateOfDeposit" placeholder="Date of Deposit">-->
+                    <div ng-show="(depositForm.depositDate.$touched && depositForm.depositDate.$invalid)"
+                         class="text-danger">
+                        <small ng-show="depositForm.depositDate.$error.required">
+                            Date of deposit is required.
+                        </small>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" id="bankAccountNumber"
-                           placeholder="Bank Account Number">
+                <div class="form-group"
+                     ng-class="{'has-error' : (depositForm.bankAccountNumber.$touched && depositForm.bankAccountNumber.$invalid)}">
+                    <input type="text" class="form-control" name="bankAccountNumber" placeholder="Bank Account Number"
+                           ng-model="deposit.bankAcctNum" required>
+                    <div ng-show="(depositForm.bankAccountNumber.$touched && depositForm.bankAccountNumber.$invalid)"
+                         class="text-danger">
+                        <small ng-show="depositForm.bankAccountNumber.$error.required">
+                            Bank account number is required.
+                        </small>
+                    </div>
                 </div>
-                <button type="submit" class="btn btn-default">Submit</button>
+                <button type="submit" class="btn btn-default"
+                        ng-class="{'btn-primary' : !depositForm.$invalid}"
+                        ng-disabled="depositForm.$invalid">Submit</button>
             </form>
 
         </div>

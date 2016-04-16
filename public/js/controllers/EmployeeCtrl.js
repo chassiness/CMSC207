@@ -2,7 +2,13 @@
  * Created by chassiness on 3/11/16.
  */
 
-angular.module('EmployeeCtrl', []).controller('EmployeeController', function($scope) {
+employee = angular.module('EmployeeCtrl', []);
+
+employee.controller('EmployeeController', function($scope, employeeBuilder) {
+
+    /**
+     * DEPOSIT HISTORY
+     */
 
     $scope.today = function() {
         var nwDt = new Date();
